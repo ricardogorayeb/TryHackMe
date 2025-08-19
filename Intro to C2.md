@@ -60,7 +60,7 @@ cd /opt/armitage/release/unix && ./armitage (in other terminal tab)
 
 ![alt text](image-1.png)
 
-Then, follow the steps on Task 4
+Then, follow the steps on Task 4 adapting to your needs
 
 ![alt text](image-2.png)
 
