@@ -99,6 +99,7 @@ meterpreter> hashdump
 **Task 7**
 
 **What setting name that allows you to modify the User Agent field in a Meterpreter payload?**
+
 ```HttpUserAgent```
 
 **What setting name that allows you to modify the Host header in a Meterpreter payload?**
