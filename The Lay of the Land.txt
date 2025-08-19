@@ -1,0 +1,60 @@
+The Lay of the Land
+
+Task 4
+
+Before going any further, ensure the attached machine is deployed and try what we discussed. Is the attached machine part of the AD environment? (Y|N)
+
+systeminfo | findstr Domain
+
+
+If it is part of an AD environment, what is the domain name of the AD?
+
+same command above
+
+Task 5
+
+Use the Get-ADUser -Filter * -SearchBase command to list the available user accounts within THM OU in the thmredteam.com domain. How many users are available?
+
+Get-ADUser -Filter * -SearchBase "OU=THM,DC=THMREDTEAM,DC=COM"
+
+Once you run the previous command, what is the UserPrincipalName (email) of the admin account?
+
+same command above
+
+Task 6
+
+Enumerate the attached Windows machine and check whether the host-based firewall is enabled or not! (Y|N)
+
+Get-NetFirewallProfile
+
+Using PowerShell cmdlets such Get-MpThreat can provide us with threats details that have been detected using MS Defender. Run it and answer the following: What is the file name that causes this alert to record?
+
+Get-MpThreat
+
+Task 6
+
+Enumerate the firewall rules of the attached Windows machine. What is the port that is allowed under the THM-Connection rule?
+
+Get-NetFirewallRule | findstr "THM-Connection"
+
+Task 9
+
+
+Finally, we can see it is listening on port 8080. Now try to apply what we discussed and find the port number for THM Service. What is the port number?
+
+wmic service where "name like 'THM Service'" get Name,PathName
+
+Get-Process -Name thm-service
+
+netstat -noa | findstr "LISTENING" | findstr "id"
+
+Visit the localhost on the port you found in Question #1. What is the flag?
+
+http://localhost:<port>
+
+
+Now enumerate the domain name of the domain controller, thmredteam.com, using the nslookup.exe, and perform a DNS zone transfer. What is the flag for one of the records?
+
+server 10.201.45.121
+
+ls -d thmredteam.com
