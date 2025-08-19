@@ -55,13 +55,15 @@ systemctl start postgresql && systemctl status postgresql.sh
 export MSF_DATABASE_CONFIG=/root/.msf4/database.yml
 cd /opt/armitage/release/unix && ./teamserver YourIP P@ssw0rd123
 cd /opt/armitage/release/unix && ./armitage (in other terminal tab)
+```
 
 ![Insert the correct info according to your Host IP Address](image.png)
 
 
 ![alt text](image-1.png)
 
-Then, follow the steps on Task 4 adapting to your needs
+
+``` Then, follow the steps on Task 4 adapting to your needs ```
 
 ![alt text](image-2.png)
 
@@ -75,8 +77,7 @@ Then, follow the steps on Task 4 adapting to your needs
 
 ![alt text](image-7.png)
 
-After you gain access, the flag is at C:\Users\Administrator\Desktop\root.txt
-```
+``` After you gain access, the flag is at C:\Users\Administrator\Desktop\root.txt ```
 
 **What flag can be found after gaining access to Ted's user account?**
 
